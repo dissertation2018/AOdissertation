@@ -9,12 +9,12 @@
 %traveling pulse solution at that point
 
 %paths
-in_path = '/Users/alexonderdonk/Desktop/';
-out_path = '/Users/alexonderdonk/Documents/Output/x0_bifurc_processed.csv';
+in_path = <filepath>;
+out_path = <filepath>;
 
 %inputs
-v_file = 'v';
-th_file = 'th';
+v_file = <filename>;
+th_file = <filename>;
 
 %process
 V=dlmread(strcat(in_path,v_file));
