@@ -1,0 +1,16 @@
+par x0=7.75,A=3,B=1.5,C=2.7,D=0,aa=0.42,bb=0.11, cc=0.43, dd=0.1, h=2.7
+
+
+Dv/dt=h-(1/v)*(2*(1-exp(-th/v))*v*(A/aa-B/bb+exp(-x0/v)*(C/cc-D/dd))+A/(aa*(aa-1/v))*(exp(-aa*th)-exp(-th/v))-B/(bb*(bb-1/v))*(exp(-bb*th)-exp(-th/v))+C/(cc*(cc-1/v))*(exp(-cc*x0)*(exp(-cc*th)-1)+exp(-x0/v)*(1-exp(-th/v)))-D/(dd*(dd-1/v))*(exp(-dd*x0)*(exp(-dd*th)-1)+exp(-x0/v)*(1-exp(-th/v)))+(exp(-th/v)-1)*(A/(aa*(aa+1/v))-B/(bb*(bb+1/v))+exp(-x0/v)*(C/(cc*(cc+1/v))-D/(dd*(dd+1/v)))))
+
+
+Dth/dt=-h+exp(th/v)*(h-(1/v)*(2*v*((A/aa-B/bb)*(1-exp(-th/v))+(C/cc-D/dd)*(exp(-x0/v)-exp(-th/v)))+A/(aa*(aa-1/v))*(exp(-aa*th)-exp(-th/v))-B/(bb*(bb-1/v))*(exp(-bb*th)-exp(-th/v))+C/(cc*(cc-1/v))*(exp(-x0/v)-exp(-cc*x0)*(1+exp(-th/v)-exp(-cc*th)))-D/(dd*(dd-1/v))*(exp(-x0/v)-exp(-dd*x0)*(1+exp(-th/v)-exp(-dd*th)))+A/(aa*(aa+1/v))*(exp(-th*(aa+1/v))-1)-B/(bb*(bb+1/v))*(exp(-th*(bb+1/v))-1)+C/(cc*(cc+1/v))*(exp(cc*x0)*exp(-th*(cc+1/v))-exp(-x0/v))-D/(dd*(dd+1/v))*(exp(dd*x0)*exp(-th*(dd+1/v))-exp(-x0/v))))
+
+init v= 11.6714198591120492665140773170, th= 8.91246220145250234168088354636
+
+@ bound=1000000, maxstor=1000000, ntst=35, nmax=20000, ds=0.01
+@ epsl=.00001, epsu=.00001, epss=.00001
+@ xlo=0,xhi=11,ylo=0,yhi=18,dsmax=.1,parmin=7,
+@ parmin=1,parmax=16,autoxmin=0,autoxmax=20,autoymin=0,autoymax=25
+
+done
